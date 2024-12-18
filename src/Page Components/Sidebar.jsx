@@ -7,8 +7,10 @@ const Sidebar = () => {
     <>
       <Container fluid>
         <Row>
-            <Col md={3} className='position-sticky'>
+            <Col md={3} className='position-sticky bg-dark text-light' vh-100>
                 <Image className='image-thumbnail w-100 h-25' src={SidebarHeader} />
+                <div>
+                <h2 className='text-center'>Admin</h2>
                 <hr />
 
                 <ul>
@@ -17,6 +19,7 @@ const Sidebar = () => {
                     <li><a href="#">Form</a></li>
                     <li><a href="#">Table</a></li>
                 </ul>
+                </div>
             </Col>
             <Col md={9}>
             <h1>Header</h1>

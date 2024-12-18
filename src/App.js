@@ -1,10 +1,12 @@
 import './App.css';
-import Sidebar from './Page Components/Sidebar';
+import MyNavbar from './Page Components/MyNavbar';
+// import Sidebar from './Page Components/Sidebar';
 
 function App() {
   return (
     <>
-      <Sidebar />
+      <MyNavbar/>
+      {/* <Sidebar /> */}
     </>
   );
 }
