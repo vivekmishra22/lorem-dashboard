@@ -1,36 +1,51 @@
-import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import SidebarHeader from '../Assets/Images/Sidebar-header.png'
+import React from 'react'
 
 const Sidebar = () => {
   return (
     <>
-      <Container fluid>
-        <Row>
-            <Col md={3} className='position-sticky bg-dark text-light' vh-100>
-                <Image className='image-thumbnail w-100 h-25' src={SidebarHeader} />
-                <div>
-                <h2 className='text-center'>Admin</h2>
-                <hr />
-
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Form</a></li>
-                    <li><a href="#">Table</a></li>
-                </ul>
-                </div>
-            </Col>
-            <Col md={9}>
-            <h1>Header</h1>
-            </Col>
-        </Row>
-      </Container>
+      
     </>
   )
 }
 
-export default Sidebar;
+export default Sidebar
+
+
+
+
+// import React from 'react';
+// import { Container, Row, Col, Image } from 'react-bootstrap';
+// import SidebarHeader from '../Assets/Images/Sidebar-header.png'
+
+// const Sidebar = () => {
+//   return (
+//     <>
+//       <Container fluid>
+//         <Row>
+//             <Col md={3} className='position-sticky bg-dark text-light' vh-100>
+//                 <Image className='image-thumbnail w-100 h-25' src={SidebarHeader} />
+//                 <div>
+//                 <h2 className='text-center'>Admin</h2>
+//                 <hr />
+
+//                 <ul>
+//                     <li><a href="#">Home</a></li>
+//                     <li><a href="#">Profile</a></li>
+//                     <li><a href="#">Form</a></li>
+//                     <li><a href="#">Table</a></li>
+//                 </ul>
+//                 </div>
+//             </Col>
+//             <Col md={9}>
+//             <h1>Header</h1>
+//             </Col>
+//         </Row>
+//       </Container>
+//     </>
+//   )
+// }
+
+// export default Sidebar;
 
 
 
