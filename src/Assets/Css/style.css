@@ -1,0 +1,20 @@
+.sidebar ul li:hover {
+    background-color: rgb(117, 117, 117);
+    border-radius: 5px;
+    cursor: pointer;
+    /* text-decoration: none; */
+}
+
+.sidebar ul li:hover a {
+    color: #fff;
+    /* background-color: rgb(117, 117, 117); */
+    /* color: #fff; */
+    /* text-decoration: none; */
+}
+
+/* .active {
+    background-color: rgb(117, 117, 117);
+    border-radius: 5px;
+    color: #fff;
+} */
+

@@ -3,7 +3,6 @@ import { Col, Container, Row, Navbar, Image, Offcanvas, Dropdown } from 'react-b
 import userLogo from '../Assets/Images/user-icon.webp';
 import { FaLaptopCode, FaUserFriends, FaShoppingCart } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
-import { TfiWrite } from "react-icons/tfi";
 import { AiOutlineForm } from "react-icons/ai";
 import { IoLogOut } from "react-icons/io5";
 import { FaTable } from "react-icons/fa6";
@@ -18,7 +17,7 @@ const MyNavbar = () => {
                             <Offcanvas className="bg-dark text-light" show={true} backdrop={false} style={{ width: "17.5%" }}>
                                 <Offcanvas.Header className='d-flex justify-content-center align-items-center'>
                                 <FaLaptopCode className="me-2 fs-2 text-primary" />
-                                    <Offcanvas.Title className="fs-3">Admin Dashboard</Offcanvas.Title>
+                                    <Offcanvas.Title className="fs-5">Admin Dashboard</Offcanvas.Title>
                                 </Offcanvas.Header>
                                 <hr className="m-0" />
                                 <Offcanvas.Body>
@@ -58,7 +57,7 @@ const MyNavbar = () => {
 
                     <Col md={10}>
                         <Navbar bg="dark" variant="dark" expand="lg">
-                            <Container className="p-2">
+                            <Container className="p-1">
                                 {/* Navbar Brand */}
                                 <Navbar.Brand href="#home">MyNavbar</Navbar.Brand>
 

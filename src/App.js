@@ -1,12 +1,21 @@
 import './App.css';
-import MyNavbar from './Page Components/MyNavbar';
-// import Sidebar from './Page Components/Sidebar';
+import MainNavbar from './Page Components/MainNavbar';
+// import MyNavbar from './Page Components/MyNavbar';
+import Sidebar from './Page Components/Sidebar';
 
 function App() {
   return (
     <>
-      <MyNavbar/>
-      {/* <Sidebar /> */}
+      <div className='d-flex'>
+        <div className='w-auto'>
+          <Sidebar />
+        </div>
+        <div className='col'>
+          <MainNavbar />
+        </div>
+      </div>
+      {/* <MyNavbar/> */}
+
     </>
   );
 }
