@@ -2,14 +2,9 @@ import React  from 'react';
 import { FaLaptopCode } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
 import { AiOutlineForm } from "react-icons/ai";
-<<<<<<< HEAD
-// import { BsPersonCircle } from "react-icons/bs";
-import { IoLogOut } from "react-icons/io5";
-=======
 import { BsCartCheck } from "react-icons/bs";
 import { IoLogOutOutline } from "react-icons/io5";
 import { SlPeople } from "react-icons/sl";
->>>>>>> 2428c867b1d9615633a0030a5b281e5577b72e02
 import '../Assets/Css/style.css';
 import { Link } from 'react-router-dom';
 
