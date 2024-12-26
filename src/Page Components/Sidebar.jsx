@@ -17,7 +17,7 @@ const Sidebar = () => {
       <div className='sidebar d-flex justify-content-between flex-column bg-dark text-white py-3 ps-3 pe-5 vh-100'>
         <div className='text-white'>
           <a href="/" className='d-flex justify-content-center align-items-center text-decoration-none text-light'>
-            <FaLaptopCode className='fs-3 me-2' />
+            <FaLaptopCode className='fs-3 me-2 text-warning-emphasis' />
             <span className='fs-2'>Admin</span>
           </a>
 
@@ -26,26 +26,26 @@ const Sidebar = () => {
           <ul className='nav nav-pills flex-column mt-2 my-1'>
             <li className='nav-item p-2'>
               <span className='d-flex justify-content-center align-items-center text-decoration-none'>
-                <RxDashboard className='me-3 fs-5' />
+                <RxDashboard className='me-3 fs-5 text-info-emphasis' />
                 <span className='fs-5'>Dashboard</span>
               </span>
             </li>
             <li className='nav-item p-2 my-1'>
               <Link to="/register" className='d-flex align-items-center text-decoration-none text-white'>
-                <AiOutlineForm className='me-3 fs-5' />
+                <AiOutlineForm className='me-3 fs-5 text-info-emphasis' />
                 <span className='fs-5'>Form</span>
               </Link>
             </li>
             <li className='nav-item p-2 my-1'>
               <Link to="/view" className='d-flex align-items-center text-decoration-none text-white'>
                 {/* <FaUserFriends className='me-3 fs-5' /> */}
-                <SlPeople className='me-3 fs-5' />
+                <SlPeople className='me-3 fs-5 text-info-emphasis' />
                 <span className='fs-5'>Users</span>
               </Link>
             </li>
             <li className='nav-item p-2 my-1'>
               <span className='d-flex align-items-center text-decoration-none'>
-                <BsCartCheck className='me-3 fs-5' />
+                <BsCartCheck className='me-3 fs-5 text-info-emphasis' />
                 <span className='fs-5'>Product</span>
               </span>
             </li>

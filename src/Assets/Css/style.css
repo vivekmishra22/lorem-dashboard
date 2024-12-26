@@ -1,11 +1,12 @@
 .sidebar ul li:hover {
     background-color: rgb(117, 117, 117);
+    /* color: #fff; */
     border-radius: 5px;
     cursor: pointer;
     /* text-decoration: none; */
 }
 
-.sidebar ul li:hover a {
+.sidebar ul li Link span:hover {
     /* color: #fff; */
     /* background-color: rgb(117, 117, 117); */
     /* color: #fff; */

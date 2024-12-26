@@ -23,8 +23,8 @@ const MainNavbar = () => {
                                 className="d-inline-block align-middle border border-info p-1"
                                 alt="User Logo"
                             /> */}
-                            <BsPersonCircle className='text-info fs-4' />
-                            <NavDropdown className="bg-transparent border-0" title="user@gmail.com" id="basic-nav-dropdown">
+                            <BsPersonCircle className='text-info fs-4 nav-item' />
+                            <NavDropdown className="bg-transparent border-0 nav-item" title="user@gmail.com" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
                                 {/* <NavDropdown.Item href="#action/3.2">
                                     Another action
