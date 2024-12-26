@@ -2,7 +2,8 @@ import React  from 'react';
 import { FaLaptopCode, FaUserFriends, FaShoppingCart } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
 import { AiOutlineForm } from "react-icons/ai";
-import { BsPersonCircle } from "react-icons/bs";
+// import { BsPersonCircle } from "react-icons/bs";
+import { IoLogOut } from "react-icons/io5";
 import '../Assets/Css/style.css';
 
 const Sidebar = () => {
@@ -24,25 +25,25 @@ const Sidebar = () => {
             <li className='nav-item p-2'>
               <span className='d-flex justify-content-center align-items-center text-decoration-none'>
                 <RxDashboard className='me-3 fs-5' />
-                <span className='fs-5'><strong>Dashboard</strong></span>
+                <span className='fs-5'>Dashboard</span>
               </span>
             </li>
             <li className='nav-item p-2 my-1'>
               <span className='d-flex align-items-center text-decoration-none'>
                 <FaUserFriends className='me-3 fs-5' />
-                <span className='fs-5'><strong>Users</strong></span>
+                <span className='fs-5'>Users</span>
               </span>
             </li>
             <li className='nav-item p-2 my-1'>
               <span className='d-flex align-items-center text-decoration-none'>
                 <AiOutlineForm className='me-3 fs-5' />
-                <span className='fs-5'><strong>Form</strong></span>
+                <span className='fs-5'>Form</span>
               </span>
             </li>
             <li className='nav-item p-2 my-1'>
               <span className='d-flex align-items-center text-decoration-none'>
                 <FaShoppingCart className='me-3 fs-5' />
-                <span className='fs-5'><strong>Table</strong></span>
+                <span className='fs-5'>Table</span>
               </span>
             </li>
           </ul>
@@ -50,8 +51,9 @@ const Sidebar = () => {
         <div className='nav-item'>
           <hr className='text-light' />
           <a href="/" className='p-2 d-flex align-items-center text-decoration-none text-light'>
-            <BsPersonCircle className='me-3 fs-5' />
-            <span className='fs-5'><strong>Users</strong></span>
+            <IoLogOut className='me-3 fs-5' />
+            {/* <BsPersonCircle className='me-3 fs-5' /> */}
+            <span className='fs-5'><strong>Logout</strong></span>
           </a>
         </div>
       </div>
