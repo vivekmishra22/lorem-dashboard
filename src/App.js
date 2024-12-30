@@ -6,6 +6,7 @@ import Sidebar from './Page Components/Sidebar';
 import View from './Page Components/View';
 // import SignIn from './Page Components/SignIn';
 import Register from './Page Components/Register';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

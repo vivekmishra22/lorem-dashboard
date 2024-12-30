@@ -9,6 +9,17 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
   const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+
+
+  // function handleChange(e) {
+  //   const value = e.target.value;
+  //   if(e.target.checked) {
+  //     setAllChecked([...selectvalues, value]);
+  //   } else {
+  //     setAllChecked(selectvalues.filter((item) => item!== value));
+  //   }
+  // }
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -25,7 +36,8 @@ const Register = () => {
       email,
       password,
       mobile,
-      address
+      address,
+      city
     }
 
     axios.post('http://localhost:8000/adduser', userData).then(res => {
@@ -36,6 +48,7 @@ const Register = () => {
       setPassword("");
       setMobile("");
       setAddress("");
+      setCity("");
     })
       .catch(err => {
         console.log(err);
@@ -98,11 +111,14 @@ const Register = () => {
                 <Col md={4}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>City</Form.Label>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select aria-label="select" name='city' 
+                      onChange={(e) => setCity(e.target.value)} required
+                    >
                       <option>-Select City-</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option value="Nashik">Nashik</option>
+                      <option value="Pune">Pune</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Dehli">Delhi</option>
                     </Form.Select>
                   </Form.Group>
                 </Col>
@@ -149,7 +165,7 @@ const Register = () => {
                     <Form.Label>Image</Form.Label>
                     <Form.Control
                       type="file"
-                      required
+                      // required
                       name="file" />
                   </Form.Group>
                 </Col>

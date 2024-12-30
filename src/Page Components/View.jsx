@@ -73,7 +73,7 @@ const View = () => {
                                             <td>{Register.email}</td>
                                             <td>{Register.mobile}</td>
                                             <td>{Register.address}</td>
-                                            <td></td>
+                                            <td>{Register.city}</td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
