@@ -10,16 +10,18 @@ const Register = () => {
   const [mobile, setMobile] = useState("");
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
+  const [gender, setGender] = useState("");
+  const [subject, setSubject] = useState([]);
 
 
-  // function handleChange(e) {
-  //   const value = e.target.value;
-  //   if(e.target.checked) {
-  //     setAllChecked([...selectvalues, value]);
-  //   } else {
-  //     setAllChecked(selectvalues.filter((item) => item!== value));
-  //   }
-  // }
+  function handleSubjectChange(e) {
+    const value = e.target.value;
+    if (e.target.checked) {
+      setSubject([...subject, value]);
+    } else {
+      setSubject(subject.filter((item) => item !== value));
+    }
+  }
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -37,7 +39,9 @@ const Register = () => {
       password,
       mobile,
       address,
-      city
+      city,
+      gender,
+      subject
     }
 
     axios.post('http://localhost:8000/adduser', userData).then(res => {
@@ -49,6 +53,8 @@ const Register = () => {
       setMobile("");
       setAddress("");
       setCity("");
+      setGender("");
+      setSubject([]);
     })
       .catch(err => {
         console.log(err);
@@ -111,7 +117,7 @@ const Register = () => {
                 <Col md={4}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>City</Form.Label>
-                    <Form.Select aria-label="select" name='city' 
+                    <Form.Select aria-label="select" name='city'
                       onChange={(e) => setCity(e.target.value)} required
                     >
                       <option>-Select City-</option>
@@ -124,7 +130,7 @@ const Register = () => {
                 </Col>
               </Row>
               <Row>
-                <Col md={4}>
+              <Col md={4}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className='me-2'>Gender</Form.Label>
                     <Form.Check
@@ -132,14 +138,18 @@ const Register = () => {
                       inline label="Male"
                       name="gender"
                       id="gender-male"
-                      value="male"
+                      value="Male"
+                      checked={gender === "male"}
+                      onChange={(e) => setGender(e.target.value)}
                     />
                     <Form.Check
                       type="radio"
                       inline label="Female"
                       name="gender"
                       id="gender-female"
-                      value="female"
+                      value="Female"
+                      checked={gender === "female"}
+                      onChange={(e) => setGender(e.target.value)}
                     />
                   </Form.Group>
                 </Col>
@@ -151,12 +161,16 @@ const Register = () => {
                       type="checkbox"
                       label="HTML"
                       name="HTML"
+                      value="HTML"
+                      onChange={handleSubjectChange}
                     />
                     <Form.Check
                       inline
                       type="checkbox"
-                      label="Css"
-                      name="Css"
+                      label="CSS"
+                      name="CSS"
+                      value="CSS"
+                      onChange={handleSubjectChange}
                     />
                   </Form.Group>
                 </Col>
