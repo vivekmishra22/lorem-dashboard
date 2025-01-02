@@ -4,24 +4,24 @@ import axios from 'axios';
 
 const Register = () => {
 
-  const [fname, setFname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [gender, setGender] = useState("");
-  const [subject, setSubject] = useState([]);
+  const [ctitle, setCtitle] = useState("");
+  const [ctext, setCtext] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [mobile, setMobile] = useState("");
+  // const [address, setAddress] = useState("");
+  // const [city, setCity] = useState("");
+  // const [gender, setGender] = useState("");
+  // const [subject, setSubject] = useState([]);
 
 
-  function handleSubjectChange(e) {
-    const value = e.target.value;
-    if (e.target.checked) {
-      setSubject([...subject, value]);
-    } else {
-      setSubject(subject.filter((item) => item !== value));
-    }
-  }
+  // function handleSubjectChange(e) {
+  //   const value = e.target.value;
+  //   if (e.target.checked) {
+  //     setSubject([...subject, value]);
+  //   } else {
+  //     setSubject(subject.filter((item) => item !== value));
+  //   }
+  // }
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -34,27 +34,27 @@ const Register = () => {
     // newData.append('address', address)
 
     const userData = {
-      fname,
-      email,
-      password,
-      mobile,
-      address,
-      city,
-      gender,
-      subject
+      ctitle,
+      ctext,
+      // password,
+      // mobile,
+      // address,
+      // city,
+      // gender,
+      // subject
     }
 
-    axios.post('http://localhost:8000/adduser', userData).then(res => {
+    axios.post('http://localhost:8000/postuser', userData).then(res => {
       console.log("hi", res.data);
       alert('Data Added Successfully!!');
-      setFname("");
-      setEmail("");
-      setPassword("");
-      setMobile("");
-      setAddress("");
-      setCity("");
-      setGender("");
-      setSubject([]);
+      setCtitle("");
+      setCtext("");
+      // setPassword("");
+      // setMobile("");
+      // setAddress("");
+      // setCity("");
+      // setGender("");
+      // setSubject([]);
     })
       .catch(err => {
         console.log(err);
@@ -66,12 +66,32 @@ const Register = () => {
     <>
       <Container>
         <Row>
-          <Col md={8} className='mx-auto my-4'>
+          <Col md={8} className='mx-auto my-5'>
             <div className="border-top border-5 border-primary"></div>
             <Form className='form-control' onSubmit={handleSubmit}>
               <h2 className='text-center'>REGISTRATION FORM</h2>
-              <p>Please enter your details to join us!</p>
-              <Row>
+
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Card Title</Form.Label>
+                <Form.Control type="text" placeholder="Enter card title" 
+                value={ctitle} required
+                onChange={(e) => setCtitle(e.target.value)}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Card Text</Form.Label>
+                <Form.Control type="text" placeholder="Description" 
+                value={ctext} required
+                onChange={(e) => setCtext(e.target.value)}
+                />
+              </Form.Group>
+
+              <Button className='w-100' variant="primary" type="submit">
+                Submit
+              </Button>
+
+              {/* <Row>
                 <Col md={4}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
@@ -183,12 +203,12 @@ const Register = () => {
                       name="file" />
                   </Form.Group>
                 </Col>
-              </Row>
-              <Row>
+              </Row> */}
+              {/* <Row>
                 <Form.Group>
                   <Button className='w-100' type="submit">Submit form</Button>
                 </Form.Group>
-              </Row>
+              </Row> */}
             </Form>
           </Col >
         </Row >

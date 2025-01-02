@@ -21,7 +21,7 @@ const View = () => {
     }, [])
 
     const showUsers = () => {
-        axios.get(`http://localhost:8000/getuser`)
+        axios.get(`http://localhost:8000/getdata`)
             .then(res => {
                 setUserData(res.data.data)
             }).catch(err => {
@@ -51,15 +51,15 @@ const View = () => {
                             <thead>
                                 <tr>
                                     <th>Sr. No</th>
-                                    <th>Name</th>
-                                    <th>Password</th>
-                                    <th>Email</th>
+                                    <th>Card Title</th>
+                                    <th>Card Description</th>
+                                    {/* <th>Email</th>
                                     <th>Mobile</th>
                                     <th>Address</th>
                                     <th>City</th>
                                     <th>Gender</th>
                                     <th>Subject</th>
-                                    <th>Images</th>
+                                    <th>Images</th> */}
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -68,73 +68,15 @@ const View = () => {
                                     return (
                                         <tr key={id}>
                                             <td>{id + 1}</td>
-                                            <td>{Register.fname}</td>
-                                            <td>{Register.password}</td>
-                                            <td>{Register.email}</td>
+                                            <td>{Register.ctitle}</td>
+                                            <td>{Register.ctext}</td>
+                                            {/* <td>{Register.email}</td>
                                             <td>{Register.mobile}</td>
                                             <td>{Register.address}</td>
                                             <td>{Register.city}</td>
                                             <td>{Register.gender}</td>
                                             <td>{Register.subject}</td>
-                                            <td></td>
-                                            <td className='px-2 py-1 d-flex justify-content-center align-items-center'>
-                                                <Button className='bg-transparent border-0'>
-                                                    {/* d-flex align-items-center */}
-                                                    {/* onClick={ () => {
-                                                        navigate(/updateuser/${Register._id})
-                                                    }} */}
-                                                    <FiEdit className='fs-5 text-primary' />
-                                                    {/* Edit */}
-                                                </Button>
-                                                <Button className='bg-transparent border-0' onClick={() => deletedata(Register._id)}>
-                                                    {/* <MdDeleteOutline /> */}
-                                                    {/* <AiTwotoneDelete /> */}
-                                                    {/* <AiOutlineDelete className='fs-5 text-primary' /> */}
-                                                    <RiDeleteBin7Line className='fs-5 text-danger' />
-                                                    {/* <MdDelete className='bg-primary' /> */}
-                                                    {/* Delete */}
-                                                </Button>
-                                            </td>
-                                        </tr>
-                                    )
-                                })}
-
-                            </tbody>
-                        </Table>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={10} xs={12} className='my-5'>
-                        <Table striped bordered hover responsive>
-                            <thead>
-                                <tr>
-                                    <th>Sr. No</th>
-                                    <th>Name</th>
-                                    <th>Password</th>
-                                    <th>Email</th>
-                                    <th>Mobile</th>
-                                    <th>Address</th>
-                                    <th>City</th>
-                                    <th>Gender</th>
-                                    <th>Subject</th>
-                                    <th>Images</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {userData.map((Register, id) => {
-                                    return (
-                                        <tr key={id}>
-                                            <td>{id + 1}</td>
-                                            <td>{Register.fname}</td>
-                                            <td>{Register.password}</td>
-                                            <td>{Register.email}</td>
-                                            <td>{Register.mobile}</td>
-                                            <td>{Register.address}</td>
-                                            <td>{Register.city}</td>
-                                            <td>{Register.gender}</td>
-                                            <td>{Register.subject}</td>
-                                            <td></td>
+                                            <td></td> */}
                                             <td className='px-2 py-1 d-flex justify-content-center align-items-center'>
                                                 <Button className='bg-transparent border-0'>
                                                     {/* d-flex align-items-center */}
