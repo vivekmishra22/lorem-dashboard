@@ -35,7 +35,7 @@ const Register = () => {
 
     const userData = {
       ctitle,
-      ctext,
+      ctext
       // password,
       // mobile,
       // address,
@@ -44,7 +44,7 @@ const Register = () => {
       // subject
     }
 
-    axios.post('http://localhost:8000/postuser', userData).then(res => {
+    axios.post('http://localhost:8000/postdata', userData).then(res => {
       console.log("hi", res.data);
       alert('Data Added Successfully!!');
       setCtitle("");
@@ -69,7 +69,7 @@ const Register = () => {
           <Col md={8} className='mx-auto my-5'>
             <div className="border-top border-5 border-primary"></div>
             <Form className='form-control' onSubmit={handleSubmit}>
-              <h2 className='text-center'>REGISTRATION FORM</h2>
+              <h2 className='text-center'>CARD FORM</h2>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Card Title</Form.Label>
