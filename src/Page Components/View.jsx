@@ -3,6 +3,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin7Line } from "react-icons/ri";
+import { FaPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 const View = () => {
 
     const [userData, setUserData] = useState([])
@@ -37,7 +40,26 @@ const View = () => {
         <>
             <Container>
                 <Row>
-                    <Col md={10} xs={12} className='my-5'>
+                    <Col md={10} xs={12} className='my-4 mx-auto'>
+                        <div className="d-flex justify-content-end mb-3">
+                            <Button variant="primary" className='m-0 px-2 py-1'>
+                                <Link to="/register" className='text-decoration-none text-white d-flex align-items-center'>
+                                    <FaPlus className='me-2' />
+                                    <span>Add Card</span>
+                                </Link>
+                            </Button>
+                        </div>
+                        {/* <button className='d-flex justify-content-end align-items-center mb-2 border-2'>
+                            
+                            <span className='fs-5'>Add card</span>
+                        </button> */}
+                        {/* <div className="d-flex justify-content-between align-items-center mb-3">
+                            <h3>Card Details</h3>
+                            <Button variant="primary" className="d-flex align-items-center">
+                                <FaPlus className="me-2" />
+                                Add Card
+                            </Button>
+                        </div> */}
                         <Table striped bordered hover responsive>
                             <thead>
                                 <tr>
