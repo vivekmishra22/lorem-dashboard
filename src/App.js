@@ -1,12 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainNavbar from './Page Components/MainNavbar';
-// import MyNavbar from './Page Components/MyNavbar';
 import Sidebar from './Page Components/Sidebar';
-import View from './Page Components/View';
-// import SignIn from './Page Components/SignIn';
-import Register from './Page Components/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CardForm from './Page Components/CardForm';
+import CardDetails from './Page Components/CardDetails';
+import Users from './Page Components/Users';
 
 function App() {
   return (
@@ -22,8 +21,9 @@ function App() {
             <MainNavbar />
 
             <Routes>
-              <Route path='/view' element={<View />} />
-              <Route path='/register' element={<Register />} />
+              <Route path='/carddetails' element={<CardDetails />} />
+              <Route path='/cardform' element={<CardForm />} />
+              <Route path='/user' element={<Users />} />
             </Routes>
 
           </div>

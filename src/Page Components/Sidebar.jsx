@@ -1,10 +1,11 @@
 import React  from 'react';
-import { FaLaptopCode } from "react-icons/fa";
-import { RxDashboard } from "react-icons/rx";
-import { AiOutlineForm } from "react-icons/ai";
+import { FaLaptopCode, FaAddressCard, FaUserEdit, FaUsers } from "react-icons/fa";
+// import { RxDashboard } from "react-icons/rx";
+// import { AiOutlineForm } from "react-icons/ai";
 // import { BsCartCheck } from "react-icons/bs";
 import { IoLogOutOutline } from "react-icons/io5";
-import { SlPeople } from "react-icons/sl";
+// import { SlPeople } from "react-icons/sl";
+import { MdOutlineAddCard } from "react-icons/md";
 import '../Assets/Css/style.css';
 import { Link } from 'react-router-dom';
 
@@ -24,11 +25,23 @@ const Sidebar = () => {
           <hr className='text-light mt-2' />
 
           <ul className='nav nav-pills flex-column mt-2 my-1'>
-            <li className='nav-item p-2'>
+            {/* <li className='nav-item p-2'>
               <span className='d-flex justify-content-center align-items-center text-decoration-none'>
                 <RxDashboard className='me-3 fs-5 text-info-emphasis' />
                 <span className='fs-5'>Dashboard</span>
               </span>
+            </li> */}
+            <li className='nav-item p-2 my-1'>
+              <Link to="/user" className='d-flex align-items-center text-decoration-none text-white'>
+                <FaUserEdit className='me-3 fs-4 text-info-emphasis' />
+                <span className='fs-5'>Add User</span>
+              </Link>
+            </li>
+            <li className='nav-item p-2 my-1'>
+              <Link to="/user" className='d-flex align-items-center text-decoration-none text-white'>
+                <FaUsers className='me-3 fs-4 text-info-emphasis' />
+                <span className='fs-5'>Users</span>
+              </Link>
             </li>
             {/* <li className='nav-item p-2 my-1'>
               <Link to="/register" className='d-flex align-items-center text-decoration-none text-white'>
@@ -37,18 +50,19 @@ const Sidebar = () => {
               </Link>
             </li> */}
             <li className='nav-item p-2 my-1'>
-              <Link to="/register" className='d-flex align-items-center text-decoration-none text-white'>
-                <AiOutlineForm className='me-3 fs-5 text-info-emphasis' />
+              <Link to="/cardform" className='d-flex align-items-center text-decoration-none text-white'>
+                {/* <AiOutlineForm className='me-3 fs-5 text-info-emphasis' /> */}
+                <MdOutlineAddCard className='me-3 fs-4 text-info-emphasis' />
                 <span className='fs-5'>Card Form</span>
               </Link>
             </li>
             <li className='nav-item p-2 my-1'>
-              <Link to="/view" className='d-flex align-items-center text-decoration-none text-white'>
+              <Link to="/carddetails" className='d-flex align-items-center text-decoration-none text-white'>
                 {/* <FaUserFriends className='me-3 fs-5' /> */}
-                <SlPeople className='me-3 fs-5 text-info-emphasis' />
+                <FaAddressCard className='me-3 fs-5 text-info-emphasis' />
                 <span className='fs-5'>Card Details</span>
               </Link>
-            </li>
+            </li> 
             {/* <li className='nav-item p-2 my-1'>
               <span className='d-flex align-items-center text-decoration-none'>
                 <BsCartCheck className='me-3 fs-5 text-info-emphasis' />
