@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const CardUpdate = () => {
 
+    const Navigate = useNavigate()
+    const{_id} = useParams("");
     const [ctitle, setCtitle] = useState("");
   const [ctext, setCtext] = useState("");
   
@@ -25,7 +28,7 @@ const CardUpdate = () => {
       .catch(err => {
         console.log(err);
       })
-      
+          
 
   }
 
