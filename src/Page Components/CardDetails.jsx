@@ -4,12 +4,14 @@ import React, { useEffect, useState } from 'react';
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import { FaPlus } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const CardDetails = () => {
 
     const [userData, setUserData] = useState([])
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         showUsers()
@@ -42,7 +44,7 @@ const CardDetails = () => {
             <Container>
                 <Row>
                     <Col md={10} xs={12} className='my-5 mx-auto'>
-                    <div className="d-flex justify-content-end mb-3">
+                        <div className="d-flex justify-content-end mb-3">
                             <Button variant="primary" className='m-0 px-2 py-1'>
                                 <Link to="/cardform" className='text-decoration-none text-white d-flex align-items-center'>
                                     <FaPlus className='me-2' />
@@ -81,8 +83,11 @@ const CardDetails = () => {
                                             <td>{Register.subject}</td>
                                             <td></td> */}
                                             <td className='p-1 d-flex justify-content-center align-items-center'>
-                                                <Button className='bg-transparent border-0'>
-                                                    <FiEdit className='fs-5 text-primary' />
+                                                <Button className='bg-transparent border-0' 
+                                                onClick={() => {
+                                                    navigate(`/CardUpdate/${Course._id}`);
+                                                }}>
+                                                    <FiEdit className='fs-5 text-warning' />
                                                 </Button>
                                                 <Button className='bg-transparent border-0' onClick={() => deletedata(Course._id)}>
                                                     <RiDeleteBin7Line className='fs-5 text-danger' />

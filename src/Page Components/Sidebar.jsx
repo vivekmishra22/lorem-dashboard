@@ -32,7 +32,7 @@ const Sidebar = () => {
               </span>
             </li> */}
             <li className='nav-item p-2 my-1'>
-              <Link to="/user" className='d-flex align-items-center text-decoration-none text-white'>
+              <Link to="/register" className='d-flex align-items-center text-decoration-none text-white'>
                 <FaUserEdit className='me-3 fs-4 text-info-emphasis' />
                 <span className='fs-5'>Add User</span>
               </Link>
@@ -53,7 +53,7 @@ const Sidebar = () => {
               <Link to="/cardform" className='d-flex align-items-center text-decoration-none text-white'>
                 {/* <AiOutlineForm className='me-3 fs-5 text-info-emphasis' /> */}
                 <MdOutlineAddCard className='me-3 fs-4 text-info-emphasis' />
-                <span className='fs-5'>Card Form</span>
+                <span className='fs-5'>Add Card</span>
               </Link>
             </li>
             <li className='nav-item p-2 my-1'>

@@ -1,12 +1,16 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row, Table } from 'react-bootstrap';
+import { FaPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 // import { FiEdit } from "react-icons/fi";
 // import { RiDeleteBin7Line } from "react-icons/ri";
 
 const Users = () => {
 
     const [userData, setUserData] = useState([])
+
+    // const navigate = useNavigate()
 
     useEffect(() => {
         showUsers()
@@ -41,13 +45,21 @@ const Users = () => {
             <Container>
                 <Row>
                     <Col md={10} xs={12} className='my-5'>
+                        <div className="d-flex justify-content-end mb-3">
+                            <Button variant="primary" className='m-0 px-2 py-1'>
+                                <Link to="/register" className='text-decoration-none text-white d-flex align-items-center'>
+                                    <FaPlus className='me-2' />
+                                    <span>Add User</span>
+                                </Link>
+                            </Button>
+                        </div>
                         <Table striped bordered hover responsive>
                             <thead>
                                 <tr>
                                     <th>Sr. No</th>
                                     <th>Name</th>
-                                    {/* <th>Card Description</th> */}
                                     <th>Email</th>
+                                    <th>Password</th>
                                     <th>Mobile</th>
                                     <th>Address</th>
                                     <th>City</th>
@@ -64,17 +76,18 @@ const Users = () => {
                                             <td>{id + 1}</td>
                                             <td>{Register.fname}</td>
                                             <td>{Register.email}</td>
+                                            <td>{Register.password}</td>
                                             <td>{Register.mobile}</td>
                                             <td>{Register.address}</td>
                                             <td>{Register.city}</td>
                                             <td>{Register.gender}</td>
                                             <td>{Register.subject}</td>
                                             <td></td>
-                                            <td className='d-flex justify-content-center align-items-center p-2'>
+                                            <td className='d-flex justify-content-center align-items-center p-1'>
                                                 {/* <Button className='bg-transparent border-0'>
                                                     <FiEdit className='fs-5 text-primary' />
                                                 </Button> */}
-                                                <Button variant='danger' className='border-0 d-flex justify-content-center align-items-center' onClick={() => deletedata(Register._id)}>
+                                                <Button variant='danger' className='py-1 border-0 d-flex justify-content-center align-items-center' onClick={() => deletedata(Register._id)}>
                                                     {/* <RiDeleteBin7Line className='fs-5 text-dark me-2' /> */}
                                                     <span>Delete</span>
                                                 </Button>
