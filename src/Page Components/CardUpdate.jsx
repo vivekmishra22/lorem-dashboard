@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const CardUpdate = () => {
   const Navigate = useNavigate();
-  const {_id} = useParams(); // Destructure _id from the URL params
+  const {_id} = useParams();          // Destructure _id from the URL params
   const [ctitle, setCtitle] = useState("");
   const [ctext, setCtext] = useState("");
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/getuserdata/${_id}`)
+      .then(res => {
+        const data = res.data.userData;
+        setCtitle(data.ctitle || "");
+        setCtext(data.ctext || "");
+        // setName(data.fname || "");
+        // setEmail(data.email || "");
+        // setPassword(data.password || "");
+        // setMobile(data.mobile || "");
+        // setAddress(data.address || "");
+        // setCity(data.city || "");
+        // setGender(data.gender || "");
+        // setSubject1(data.subject1 || "");
+        // setSubject2(data.subject2 || "");
+        // setImage(data.image || "");
+      }).catch(err => {
+        console.log(err);
+      });
+  },[]);
   
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,8 +38,7 @@ const CardUpdate = () => {
       ctext
     };
 
-    // Fix the URL string interpolation with backticks
-    axios.put(`http://localhost:8000/putuser/${_id}`, userData)
+    axios.put(`http://localhost:8000/putdata/${_id}`, userData)
       .then(res => {
         console.log("Response:", res.data);
         alert('Data Updated Successfully!!');
@@ -29,7 +49,7 @@ const CardUpdate = () => {
         console.log(err);
       });
 
-    Navigate("/"); // Navigate to home after the operation
+    Navigate("/carddetails");          // Navigate to home after the operation
   }
 
   return (
