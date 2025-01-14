@@ -58,14 +58,9 @@ const Users = () => {
                                 <tr>
                                     <th>Sr. No</th>
                                     <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Password</th>
                                     <th>Mobile</th>
                                     <th>Address</th>
-                                    <th>City</th>
-                                    <th>Gender</th>
-                                    <th>Subject</th>
-                                    <th>Images</th>
+                                    <th>Product / Service</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -74,15 +69,10 @@ const Users = () => {
                                     return (
                                         <tr key={id}>
                                             <td>{id + 1}</td>
-                                            <td>{Register.fname}</td>
-                                            <td>{Register.email}</td>
-                                            <td>{Register.password}</td>
+                                            <td>{Register.name}</td>
                                             <td>{Register.mobile}</td>
                                             <td>{Register.address}</td>
-                                            <td>{Register.city}</td>
-                                            <td>{Register.gender}</td>
-                                            <td>{Register.subject}</td>
-                                            <td></td>
+                                            <td>{Register.product}</td>
                                             <td className='d-flex justify-content-center align-items-center p-1'>
                                                 {/* <Button className='bg-transparent border-0'>
                                                     <FiEdit className='fs-5 text-primary' />

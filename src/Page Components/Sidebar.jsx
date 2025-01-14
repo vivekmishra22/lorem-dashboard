@@ -50,10 +50,10 @@ const Sidebar = () => {
               </Link>
             </li> */}
             <li className='nav-item p-2 my-1'>
-              <Link to="/cardform" className='d-flex align-items-center text-decoration-none text-white'>
+              <Link to="/sliderform" className='d-flex align-items-center text-decoration-none text-white'>
                 {/* <AiOutlineForm className='me-3 fs-5 text-info-emphasis' /> */}
                 <MdOutlineAddCard className='me-3 fs-4 text-info-emphasis' />
-                <span className='fs-5'>Add Card</span>
+                <span className='fs-5'>Edit Slider</span>
               </Link>
             </li>
             <li className='nav-item p-2 my-1'>
