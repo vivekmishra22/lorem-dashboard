@@ -10,8 +10,6 @@ const Users = () => {
 
     const [userData, setUserData] = useState([])
 
-    // const navigate = useNavigate()
-
     useEffect(() => {
         showUsers()
     }, [])

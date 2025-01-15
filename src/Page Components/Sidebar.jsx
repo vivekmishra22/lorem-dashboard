@@ -57,10 +57,10 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className='nav-item p-2 my-1'>
-              <Link to="/carddetails" className='d-flex align-items-center text-decoration-none text-white'>
+              <Link to="/sliderdetails" className='d-flex align-items-center text-decoration-none text-white'>
                 {/* <FaUserFriends className='me-3 fs-5' /> */}
                 <FaAddressCard className='me-3 fs-5 text-info-emphasis' />
-                <span className='fs-5'>Card Details</span>
+                <span className='fs-5'>Slider Details</span>
               </Link>
             </li> 
             {/* <li className='nav-item p-2 my-1'>
